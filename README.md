@@ -1,5 +1,7 @@
 # add-convert-ppt-pptx-pps-ppsx-to-context-menu
 A quick way to Convert pptx ppsx ppt pps to PDF directly from the context menu
+This script relies heavily on iBug's script found here: 
+https://github.com/iBug/vbsGadgets
 
 1. Copy Convert_pptx_ppsx_ppt_to_PDF.vbs to your c:\ drive - preferably the root of the drive
 2. Run the .reg file
