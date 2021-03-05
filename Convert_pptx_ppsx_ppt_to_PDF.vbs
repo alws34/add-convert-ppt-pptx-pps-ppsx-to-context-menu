@@ -1,7 +1,3 @@
-' Author: iBug
-' Converts all PPTX to PDF in current directory
-' Author: iBug
-
 Option Explicit
 
 Dim Shell, FS
