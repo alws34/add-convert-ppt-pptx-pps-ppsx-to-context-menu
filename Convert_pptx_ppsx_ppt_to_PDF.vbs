@@ -12,14 +12,14 @@ Sub Conv(FileName, ext)
   Set PPT = PowerPoint.Presentations.Open(FileName)
   Set Range = PPT.PrintOptions.Ranges.Add(1, 1)
   SaveName = Replace(FileName, "." & ext, ".pdf")
-  PPT.ExportAsFixedFormat SaveName, 2, 2, 0, 2, 4, 0, Range, 1, False, False, False, False, False
+  PPT.ExportAsFixedFormat SaveName, 2, 2, 0, 2, 1, 0, Range, 1, False, False, True, False, False
   PPT.Close
 End Sub
 
 Sub ConvAll(Dir)
   Dim Item
   For Each Item In Dir.Files
-    If LCase(FS.GetExtensionName(Item.Path)) = "pptx" or LCase(FS.GetExtensionName(Item.Path)) = "ppsx" or LCase(FS.GetExtensionName(Item.Path)) = "ppt" or LCase(FS.GetExtensionName(Item.Path)) = "pps" Then
+    If LCase(FS.GetExtensionName(Item.Path)) = "pptx" or LCase(FS.GetExtensionName(Item.Path)) = "ppt" or LCase(FS.GetExtensionName(Item.Path)) = "ppsx"  or LCase(FS.GetExtensionName(Item.Path)) = "pps" Then
       Conv Item.Path, LCase(FS.GetExtensionName(Item.Path))
     End If
   Next
